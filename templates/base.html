@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <nav>
+      <a href="{% url 'users_list' %}">Users</a>
+    </nav>
+    {% block content %}{% endblock %}
+  </body>
+</html>

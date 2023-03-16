@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Products in Order {{ order.pk }}</h1>
+  {% if products %}
+    <ul>
+      {% for product in products %}
+        <li>{{ product.name }} ({{ product.price }})</li>
+      {% empty %}
+        <p>No products found.</p>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Users</h1>
+  {% for user in users %}
+    <p><a href="{% url 'user_orders' user_id=user.id %}">{{ user.name }}</a></p>
+  {% empty %}
+    <p>No users found.</p>
+  {% endfor %}
+{% endblock %}
